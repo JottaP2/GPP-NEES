@@ -33,7 +33,7 @@
   transition: ease;
 }
 
-/* Remover estilos padrão do Splide */
+
 .splide__track {
   overflow: visible;
 }

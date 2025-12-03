@@ -14,28 +14,29 @@ export default function Home() {
   return (
     <main className="flex flex-col">
       <Header />
-      <section className="w-full h-[600px] bg-[#FF9359] flex mx-auto justify-center items-center gap-10">
-        <article className="max-w-[1240px]  h-full flex flex-col justify-center gap-6">
+      <section className="w-full h-[500px] md:h-[600px] bg-[#FF9359] flex mx-auto justify-center items-center gap-10 rounded-b-[30px] md:rounded-b-[50px] px-4 md:px-0">
+        <article className="w-full max-w-[1240px] h-full flex flex-col justify-center gap-4 md:gap-6 p-10">
           <div className="">
             <Image
               src="/logoHorizontalBlack.svg"
               alt="Banner Image"
-              width={259}
-              height={38}
+              width={200}
+              height={29}
+              className="md:w-[259px] md:h-[38px]"
             />
           </div>
           <div className="text-white flex flex-col">
-            <h1 className="text-[48px] font-bold my-4 max-w-[610px] leading-[50px]">
+            <h1 className="text-[28px] md:text-[48px] font-bold my-2 md:my-4 max-w-full md:max-w-[610px] leading-[32px] md:leading-[50px]">
               Dados do TED 12244 Inteligência Aumentada no PNLD
             </h1>
-            <p className="max-w-[400px] text-[#1E1E1E] ">
+            <p className="max-w-full md:max-w-[400px] text-[#1E1E1E] text-[14px] md:text-base">
               Otimizando a distribuição de livros didáticos no Brasil através da
               ciência de dados
             </p>
           </div>
         </article>
       </section>
-        <LogoCarouselDemo logos={logos} />
+      <LogoCarouselDemo logos={logos} />
     </main>
   );
 }

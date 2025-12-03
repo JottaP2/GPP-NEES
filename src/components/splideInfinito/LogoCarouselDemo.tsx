@@ -1,7 +1,9 @@
 'use client';
-
+import Image from 'next/image';
 import React from 'react';
+
 import { Splide as SplideCarousel, SplideSlide as CarouselSlide } from '@splidejs/react-splide';
+
 import '@splidejs/react-splide/css';
 import './LogoCarousel.css';
 
@@ -49,9 +51,11 @@ const LogoCarouselDemo: React.FC<LogoCarouselProps> = ({ logos }) => {
         {logos.map((logo) => (
           <CarouselSlide key={logo.id}>
             <div className="logo-item">
-              <img
+              <Image
                 src={logo.src}
                 alt={logo.alt}
+                width={400}
+                height={100}
                 className="logo-image"
                 loading="lazy"
               />
