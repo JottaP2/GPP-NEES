@@ -2,6 +2,7 @@
 import Image from 'next/image';
 import React from 'react';
 
+// @ts-ignore
 import { Splide as SplideCarousel, SplideSlide as CarouselSlide } from '@splidejs/react-splide';
 
 import '@splidejs/react-splide/css';
