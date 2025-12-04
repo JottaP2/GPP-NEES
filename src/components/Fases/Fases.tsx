@@ -1,9 +1,6 @@
 import React from "react";
 import {
   Calendar,
-  Target,
-  AlertTriangle,
-  Lightbulb,
   CheckCircle,
   Circle,
 } from "lucide-react";

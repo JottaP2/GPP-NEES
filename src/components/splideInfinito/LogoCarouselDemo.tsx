@@ -2,8 +2,7 @@
 import Image from 'next/image';
 import React from 'react';
 
-// @ts-ignore
-import { Splide as SplideCarousel, SplideSlide as CarouselSlide } from '@splidejs/react-splide';
+import { Splide, SplideSlide } from '@splidejs/react-splide';
 
 import '@splidejs/react-splide/css';
 import './LogoCarousel.css';
@@ -48,9 +47,9 @@ const LogoCarouselDemo: React.FC<LogoCarouselProps> = ({ logos }) => {
 
   return (
     <div className="logo-carousel-container">
-      <SplideCarousel options={splideOptions} className="logo-carousel">
+      <Splide options={splideOptions} className="logo-carousel">
         {logos.map((logo) => (
-          <CarouselSlide key={logo.id}>
+          <SplideSlide key={logo.id}>
             <div className="logo-item">
               <Image
                 src={logo.src}
@@ -61,9 +60,9 @@ const LogoCarouselDemo: React.FC<LogoCarouselProps> = ({ logos }) => {
                 loading="lazy"
               />
             </div>
-          </CarouselSlide>
+          </SplideSlide>
         ))}
-      </SplideCarousel>
+      </Splide>
     </div>
   );
 };

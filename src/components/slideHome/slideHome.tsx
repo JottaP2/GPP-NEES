@@ -1,18 +1,20 @@
 'use client';
 import Image from "next/image";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Pagination, Autoplay } from 'swiper/modules';
-import { useEffect, useState } from 'react';
+import { Navigation, Autoplay } from 'swiper/modules';
+import { useSyncExternalStore } from 'react';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 
-export default function SlideHome() {
-  const [isClient, setIsClient] = useState(false);
+const emptySubscribe = () => () => {};
 
-  useEffect(() => {
-    setIsClient(true);
-  }, []);
+export default function SlideHome() {
+  const isClient = useSyncExternalStore(
+    emptySubscribe,
+    () => true,
+    () => false
+  );
 
   if (!isClient) return null;
 
