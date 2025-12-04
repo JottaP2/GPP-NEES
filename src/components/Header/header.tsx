@@ -17,9 +17,10 @@ export default function Header() {
           <Image
             src="/logoHorizontalBlack.svg"
             alt="GPPUFAL Logo"
-            width={150}
-            height={25}
-            className="md:w-[200px] md:h-[30px]"
+            width={200}
+            height={29}
+            style={{ width: "auto", height: "auto" }}
+            className="md:w-[259px] md:h-[38px]"
           />
         </div>
 
@@ -31,7 +32,7 @@ export default function Header() {
           <a href="#" className="text-white hover:text-[#272727] transition-colors">
             Equipe
           </a>
-          <a href="#" className="text-white hover:text-[#272727] transition-colors">
+          <a href="#trajetoria" className="text-white hover:text-[#272727] transition-colors">
         Trajetória
           </a>
           <a href="#" className="text-white hover:text-[#272727] transition-colors">
