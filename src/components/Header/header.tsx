@@ -35,7 +35,7 @@ export default function Header() {
           <a href="#trajetoria" className="text-white hover:text-[#272727] transition-colors">
         Trajetória
           </a>
-          <a href="#" className="text-white hover:text-[#272727] transition-colors">
+          <a href="#dados" className="text-white hover:text-[#272727] transition-colors">
            Dados
           </a>
             <a href="#" className="text-white hover:text-[#272727] transition-colors">
@@ -89,14 +89,14 @@ export default function Header() {
             Equipe
           </a>
           <a
-            href="#"
+            href="#trajetoria"
             className="block text-white hover:text-[#272727] transition-colors"
             onClick={() => setIsMenuOpen(false)}
           >
              Trajetória
           </a>
           <a
-            href="#"
+            href="#dados"
             className="block text-white hover:text-[#272727] transition-colors"
             onClick={() => setIsMenuOpen(false)}
           >

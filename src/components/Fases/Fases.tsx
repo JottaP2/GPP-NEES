@@ -46,17 +46,16 @@ const timelineData = [
     title: "Consolidação e Análises",
     description:
       "Encerramento das atividades com maior qualidade e confiabilidade nos resultados produzidos. Base final de 6.241 escolas contempladas.",
-    isActive: false,
+    isActive: true,
   },
 ];
-
 
 const Trajetoria: React.FC = () => {
   return (
       <section id="trajetoria" className="py-20 px-5 max-w-4xl mx-auto">
         <div className="flex items-center justify-center gap-3 mb-10">
           <Calendar className="w-8 h-8 text-orange-400" />
-          <h2 className="text-2xl md:text-3xl font-semibold text-slate-800">Linha do Tempo das ações da equipe no TED</h2>
+          <h2 className="text-2xl md:text-3xl font-semibold text-slate-800 text-center">Linha do Tempo das Ações  Realizadas</h2>
         </div>
         
         <div className="relative pl-10 md:pl-12">
@@ -66,7 +65,7 @@ const Trajetoria: React.FC = () => {
           {timelineData.map((item, index) => (
             <div
               key={index}
-              className={`relative mb-10 last:mb-0 pl-8 ${item.isActive ? "" : "opacity-70"}`}
+              className="relative mb-10 last:mb-0 pl-8"
             >
               {/* Marcador */}
               <div className="absolute -left-6 md:-left-5 top-0 bg-white p-1 rounded-full">
@@ -78,7 +77,7 @@ const Trajetoria: React.FC = () => {
               </div>
               
               {/* Conteúdo */}
-              <div className={`bg-white p-6 rounded-xl shadow-md hover:shadow-lg hover:-translate-y-1 transition-all duration-300 ${!item.isActive ? "border-2 border-dashed border-slate-300" : ""}`}>
+              <div className="bg-white p-6 rounded-xl shadow-md hover:shadow-lg hover:-translate-y-1 transition-all duration-300 border border-slate-100">
                 <span className="inline-block bg-blue-50 text-orange-400 px-3 py-1 rounded-full text-sm font-semibold mb-3">
                   {item.date}
                 </span>

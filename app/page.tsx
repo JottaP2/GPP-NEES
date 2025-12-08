@@ -3,6 +3,7 @@ import Image from "next/image";
 import LogoCarouselDemo from "@/src/components/splideInfinito/LogoCarouselDemo";
 import SlideHome from "@/src/components/slideHome/slideHome";
 import Fases from "@/src/components/Fases/Fases";
+import Dados from "@/src/components/Dados/Dados";
 
 const logos = [
   { id: "1", src: "/image 1.png", alt: "Logo 1" },
@@ -47,6 +48,7 @@ export default function Home() {
       </section>
       <LogoCarouselDemo logos={logos} />
       <Fases />
+      <Dados />
     </main>
   );
 }

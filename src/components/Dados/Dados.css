@@ -1,0 +1,213 @@
+.dados-container {
+  padding: 2rem;
+  background: white;
+  min-height: 100vh;
+}
+
+.dados-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.dados-header h1 {
+  font-size: 2.5rem;
+  color: #1f2937;
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+}
+
+.dados-subtitle {
+  font-size: 1.1rem;
+  color: #6b7280;
+}
+
+.grid-numeros {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 3rem;
+}
+
+.card-numero {
+  background: white;
+  border-radius: 10px;
+  padding: 1.5rem;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-numero:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15);
+}
+
+.icon-numero {
+  font-size: 2.5rem;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.label-numero {
+  font-size: 1rem;
+  color: #6b7280;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+}
+
+.valor-numero {
+  font-size: 2.25rem;
+  color: #FF9359;
+  font-weight: 700;
+  margin: 0;
+}
+
+/* Gráficos */
+.secao-grafico {
+  background: white;
+  border-radius: 10px;
+  padding: 2.5rem; /* aumentado */
+  margin-bottom: 2rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  min-height: 520px; /* garante card maior */
+}
+
+.secao-grafico h2 {
+  color: #1f2937;
+  margin-bottom: 1.5rem;
+  font-weight: 600;
+}
+
+.container-grafico {
+  width: 100%;
+  height: 520px; /* aumentado */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* evita que conteúdo SVG seja cortado pelo pai */
+  overflow: visible;
+  padding-top: 12px;
+}
+
+/* ajuste específico para o gráfico de pizza (para não cortar fatia/label superior) */
+.container-pizza {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 520px; /* aumentado */
+  overflow: visible;
+  padding-top: 12px;
+}
+
+/* Insights */
+.secao-insights {
+  margin-top: 3rem;
+}
+
+.secao-insights h2 {
+  color: #1f2937;
+  margin-bottom: 1.5rem;
+  font-weight: 600;
+}
+
+.insights-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+.insight-card {
+  background: white;
+  border-radius: 10px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-left: 4px solid #FF9359;
+  transition: transform 0.3s ease;
+}
+
+.insight-card:hover {
+  transform: translateX(5px);
+}
+
+.insight-card h3 { 
+  color: #1f2937;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+.insight-card p {
+  color: #6b7280;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Responsivo */
+@media (max-width: 1024px) {
+  .container-grafico,
+  .container-pizza {
+    height: 480px; /* reduz um pouco em tablets */
+  }
+}
+
+@media (max-width: 768px) {
+  .dados-container {
+    padding: 1rem;
+  }
+
+  .dados-header h1 {
+    font-size: 1.8rem;
+  }
+
+  .grid-numeros {
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 1rem;
+  }
+
+  .secao-grafico {
+    padding: 1.25rem; /* mantém maior que antes no mobile */
+    margin-bottom: 1rem;
+    min-height: 420px; /* tamanho grande porém responsivo */
+  }
+
+  .container-grafico,
+  .container-pizza {
+    height: 420px;
+    min-height: 420px;
+  }
+}
+
+@media (max-width: 480px) {
+  .dados-header h1 {
+    font-size: 1.5rem;
+  }
+
+  .secao-grafico {
+    padding: 0.9rem;
+    margin-bottom: 1rem;
+    min-height: 360px;
+  }
+
+  .container-grafico,
+  .container-pizza {
+    height: 360px;
+    min-height: 360px;
+  }
+}
+
+/* alinha ícone + título (estilo semelhante à page FASES) */
+.header-titulo {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  justify-content: center;
+}
+
+@media (max-width: 768px) {
+  .label-numero {
+    font-size: 0.95rem;
+  }
+
+  .valor-numero {
+    font-size: 1.75rem;
+  }
+}
