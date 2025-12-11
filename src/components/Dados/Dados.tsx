@@ -103,12 +103,12 @@ const Dados: React.FC = () => {
     { name: 'Outros', value: 12 },
   ];
 
-  // Ajustes para mobile no gráfico de barras
-  const barChartHeight = isMobile ? 360 : 300;
-  const chartTopMargin = isMobile ? 40 : 30; // aumenta espaço superior para evitar corte
+  // Ajustes para margens e altura dos gráficos
+  const barChartHeight = isMobile ? 360 : 400;
+  const chartTopMargin = isMobile ? 40 : 20;
   const barChartMargin = isMobile
     ? { top: chartTopMargin, right: 20, left: 20, bottom: 70 }
-    : { top: chartTopMargin, right: 30, left: 30, bottom: 20 };
+    : { top: 20, right: 30, left: 30, bottom: 80 }; // aumenta bottom para legendas no desktop
   const lineChartMargin = { top: chartTopMargin, right: 20, left: 20, bottom: 20 };
   const pieChartMargin = { top: chartTopMargin, right: 20, left: 20, bottom: 20 };
   const formatEstadoTick = (value: string) => {
@@ -169,61 +169,64 @@ const Dados: React.FC = () => {
         </div>
       </section>
 
-      {/* Seção: Distribuição Geográfica */}
-      <section className="secao-grafico">
-        <h2>Aplicações por Unidade Federativa</h2>
-        <div className="container-grafico">
-          <ResponsiveContainer width="100%" height={barChartHeight} style={{ overflow: 'visible' }}>
-            <BarChart data={aplicacoesPorUF} margin={barChartMargin}>
-              <CartesianGrid strokeDasharray="3 3" />
-              <XAxis
-                dataKey="estado"
-                tickFormatter={formatEstadoTick}
-                interval={0}
-                angle={isMobile ? -45 : 0}
-                textAnchor={isMobile ? 'end' : 'middle'}
-                height={isMobile ? 80 : 30}
-              />
-              <YAxis />
-              <Tooltip />
-              <Legend
-                verticalAlign={isMobile ? "bottom" : "top"}
-                height={isMobile ? 36 : 20}
-                wrapperStyle={isMobile ? { marginTop: 8 } : {}}
-              />
-              <Bar
-                dataKey="aplicacoes"
-                fill="#10b981"
-                name={isMobile ? "Aplic." : "Aplicações"}
-              />
-            </BarChart>
-          </ResponsiveContainer>
+      {/* Seção: Distribuição Geográfica e Help-desk - LADO A LADO NO DESKTOP */}
+      <section className={`secao-grafico ${isMobile ? 'empilhado' : 'lado-a-lado'}`}>
+        {/* Gráfico de Barras */}
+        <div className="grafico-wrapper">
+          <h2>Aplicações por Unidade Federativa</h2>
+          <div className="container-grafico">
+            <ResponsiveContainer width="100%" height={barChartHeight} style={{ overflow: 'visible' }}>
+              <BarChart data={aplicacoesPorUF} margin={barChartMargin}>
+                <CartesianGrid strokeDasharray="3 3" />
+                <XAxis
+                  dataKey="estado"
+                  tickFormatter={formatEstadoTick}
+                  interval={0}
+                  angle={isMobile ? -45 : -30}
+                  textAnchor={isMobile ? 'end' : 'end'}
+                  height={isMobile ? 80 : 100}
+                />
+                <YAxis />
+                <Tooltip />
+                <Legend
+                  verticalAlign="bottom"
+                  height={isMobile ? 36 : 30}
+                  wrapperStyle={isMobile ? { marginTop: 8 } : { marginTop: 10 }}
+                />
+                <Bar
+                  dataKey="aplicacoes"
+                  fill="#10b981"
+                  name={isMobile ? "Aplic." : "Aplicações"}
+                />
+              </BarChart>
+            </ResponsiveContainer>
+          </div>
         </div>
-      </section>
 
-      {/* Seção: Help-desk */}
-      <section className="secao-grafico">
-        <h2>Bastidores do Suporte - Distribuição de E-mails Help-desk</h2>
-        <div className="container-grafico container-pizza">
-          <ResponsiveContainer width="100%" height={300} style={{ overflow: 'visible' }}>
-            <PieChart margin={pieChartMargin}>
-               <Pie
-                 data={distribuicaoHelpdesk}
-                 cx="50%"
-                 cy="50%"
-                 labelLine={false}
-                 label={isMobile ? ({ name, value }) => `${(name as string)?.charAt(0) || '?'}: ${value}%` : ({ name, value }) => `${name || 'N/A'}: ${value}%`}
-                 outerRadius={isMobile ? 60 : 100}
-                 fill="#8884d8"
-                 dataKey="value"
-               >
-                 {distribuicaoHelpdesk.map((entry, index) => (
-                   <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
-                 ))}
-               </Pie>
-               <Tooltip />
-             </PieChart>
-           </ResponsiveContainer>
+        {/* Gráfico de Pizza */}
+        <div className="grafico-wrapper">
+          <h2>Bastidores do Suporte - Distribuição de E-mails Help-desk</h2>
+          <div className="container-grafico container-pizza">
+            <ResponsiveContainer width="100%" height={300} style={{ overflow: 'visible' }}>
+              <PieChart margin={pieChartMargin}>
+                 <Pie
+                   data={distribuicaoHelpdesk}
+                   cx="50%"
+                   cy="50%"
+                   labelLine={false}
+                   label={isMobile ? ({ name, value }) => `${(name as string)?.charAt(0) || '?'}: ${value}%` : ({ name, value }) => `${name || 'N/A'}: ${value}%`}
+                   outerRadius={isMobile ? 60 : 100}
+                   fill="#8884d8"
+                   dataKey="value"
+                 >
+                   {distribuicaoHelpdesk.map((entry, index) => (
+                     <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
+                   ))}
+                 </Pie>
+                 <Tooltip />
+               </PieChart>
+             </ResponsiveContainer>
+          </div>
         </div>
       </section>
 
