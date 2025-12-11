@@ -1,6 +1,7 @@
 "use client";
 import { useState } from "react";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -24,21 +25,21 @@ export default function Header() {
 
         {/* Desktop Menu */}
         <nav className="hidden md:flex space-x-8">
-          <a href="#" className="text-white hover:text-[#272727] transition-colors">
+          <Link href="/" className="text-white hover:text-[#272727] transition-colors">
             Início
-          </a>
-          <a href="#" className="text-white hover:text-[#272727] transition-colors">
+          </Link>
+          <Link href="/Equipe" className="text-white hover:text-[#272727] transition-colors">
             Equipe
-          </a>
-          <a href="#trajetoria" className="text-white hover:text-[#272727] transition-colors">
+          </Link>
+          <Link href="#trajetoria" className="text-white hover:text-[#272727] transition-colors">
             Trajetória
-          </a>
-          <a href="#dados" className="text-white hover:text-[#272727] transition-colors">
+          </Link>
+          <Link href="#dados" className="text-white hover:text-[#272727] transition-colors">
             Dados
-          </a>
-          <a href="#" className="text-white hover:text-[#272727] transition-colors">
+          </Link>
+          <Link href="/escolas" className="text-white hover:text-[#272727] transition-colors">
             Escolas
-          </a>
+          </Link>
         </nav>
 
         {/* Hamburger Button */}
@@ -72,41 +73,41 @@ export default function Header() {
         }`}
       >
         <nav className="px-4 py-4 space-y-4">
-          <a
-            href="#"
+          <Link
+            href="/"
             className="block text-white hover:text-[#272727] transition-colors py-2"
             onClick={() => setIsMenuOpen(false)}
           >
             Início
-          </a>
-          <a
-            href="#"
+          </Link>
+          <Link
+            href="/Equipe"
             className="block text-white hover:text-[#272727] transition-colors py-2"
             onClick={() => setIsMenuOpen(false)}
           >
             Equipe
-          </a>
-          <a
+          </Link>
+          <Link
             href="#trajetoria"
             className="block text-white hover:text-[#272727] transition-colors py-2"
             onClick={() => setIsMenuOpen(false)}
           >
             Trajetória
-          </a>
-          <a
+          </Link>
+          <Link
             href="#dados"
             className="block text-white hover:text-[#272727] transition-colors py-2"
             onClick={() => setIsMenuOpen(false)}
           >
             Dados
-          </a>
-          <a
-            href="#"
+          </Link>
+          <Link
+            href="/escolas"
             className="block text-white hover:text-[#272727] transition-colors py-2"
             onClick={() => setIsMenuOpen(false)}
           >
             Escolas
-          </a>
+          </Link>
         </nav>
       </div>
     </header>

@@ -4,6 +4,8 @@ import LogoCarouselDemo from "@/src/components/splideInfinito/LogoCarouselDemo";
 import SlideHome from "@/src/components/slideHome/slideHome";
 import Fases from "@/src/components/Fases/Fases";
 import Dados from "@/src/components/Dados/Dados";
+import Footer from "@/src/components/Footer/footer";
+import ScrollToTop from "@/src/components/ScrollToTop/scrollToTop";
 
 const logos = [
   { id: "1", src: "/image 1.png", alt: "Logo 1" },
@@ -49,6 +51,8 @@ export default function Home() {
       <LogoCarouselDemo logos={logos} />
       <Fases />
       <Dados />
+        <Footer />
+                <ScrollToTop />
     </main>
   );
 }
