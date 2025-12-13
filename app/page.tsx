@@ -2,6 +2,7 @@ import Header from "@/src/components/Header/header";
 import Image from "next/image";
 import LogoCarouselDemo from "@/src/components/splideInfinito/LogoCarouselDemo";
 import SlideHome from "@/src/components/slideHome/slideHome";
+import HomeContent from "@/src/components/Sections/HomeContent";
 import Fases from "@/src/components/Fases/Fases";
 import Dados from "@/src/components/Dados/Dados";
 import Footer from "@/src/components/Footer/footer";
@@ -48,6 +49,7 @@ export default function Home() {
           </div>
         </div>
       </section>
+      <HomeContent />
       <LogoCarouselDemo logos={logos} />
       <Fases />
       <Dados />
