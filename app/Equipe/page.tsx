@@ -1,3 +1,6 @@
+import Header from "@/src/components/Header/header";
+import Footer from "@/src/components/Footer/footer";
+
 export default function Equipe() {
   const team = [
     {
@@ -59,13 +62,15 @@ export default function Equipe() {
   ];
 
   return (
+   <main>
+    <Header />  
     <div className="min-h-screen bg-gray-50 p-6 md:p-8">
       <div className="max-w-7xl mx-auto">
         <header className="mb-8">
-          <h1 className="text-3xl sm:text-4xl font-bold text-amber-500">
-            Equipe
+          <h1 className="text-3xl sm:text-4xl font-bold text-amber-500 justify-center flex">
+                Conheça Nossa Equipe
           </h1>
-          <p className="mt-2 text-sm sm:text-base text-gray-600 max-w-2xl">
+          <p className="mt-2 text-sm sm:text-base text-gray-600 max-w-2xl text-justify mx-auto">
             Conheça os integrantes do projeto. Cada membro atua em áreas que
             garantem a entrega de um produto estável, acessível e de alta
             qualidade.
@@ -104,5 +109,8 @@ export default function Equipe() {
         </section>
       </div>
     </div>
+    <Footer /> 
+   </main> 
+    
   );
 }
