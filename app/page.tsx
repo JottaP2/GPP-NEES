@@ -9,11 +9,11 @@ import Footer from "@/src/components/Footer/footer";
 import ScrollToTop from "@/src/components/ScrollToTop/scrollToTop";
 
 const logos = [
-  { id: "1", src: "/image 1.png", alt: "Logo 1" },
-  { id: "2", src: "/image 2.png", alt: "Logo 2" },
-  { id: "3", src: "/image 3.png", alt: "Logo 3" },
-  { id: "4", src: "/image 4.png", alt: "Logo 4" },
-  { id: "5", src: "/image 5.png", alt: "Logo 5" },
+  { id: "1", src: "/image1.png", alt: "Logo 1" },
+  { id: "2", src: "/image2.png", alt: "Logo 2" },
+  { id: "3", src: "/image3.png", alt: "Logo 3" },
+  { id: "4", src: "/image4.png", alt: "Logo 4" },
+  { id: "5", src: "/image5.png", alt: "Logo 5" },
 ];
 
 export default function Home() {
@@ -49,8 +49,8 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <HomeContent />
       <LogoCarouselDemo logos={logos} />
+      <HomeContent />
       <Fases />
       <Dados />
         <Footer />
