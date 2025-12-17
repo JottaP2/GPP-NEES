@@ -15,7 +15,7 @@ export default function Equipe() {
       name: "João Pedro",
       role: "Assistente de Pesquisa e QA",
       bio: "No projeto TED 12244, realizei pesquisas presenciais (Penedo-AL) e remotas, articulei com SEDUCs e executei testes de QA na plataforma Coleta PNLD. Além disso, coordenei o fluxo de comunicação entre as equipes de validação e help-desk. ",
-      img: "./jepeto.jpeg",
+      img: "./Jepeto.jpeg",
     },
     {
       id: 3,
