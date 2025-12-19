@@ -37,9 +37,6 @@ export default function Header() {
           <Link href="#dados" className="text-white hover:text-[#272727] transition-colors">
             Dados
           </Link>
-          <Link href="/escolas" className="text-white hover:text-[#272727] transition-colors">
-            Escolas
-          </Link>
         </nav>
 
         {/* Hamburger Button */}
@@ -100,13 +97,6 @@ export default function Header() {
             onClick={() => setIsMenuOpen(false)}
           >
             Dados
-          </Link>
-          <Link
-            href="/escolas"
-            className="block text-white hover:text-[#272727] transition-colors py-2"
-            onClick={() => setIsMenuOpen(false)}
-          >
-            Escolas
           </Link>
         </nav>
       </div>
