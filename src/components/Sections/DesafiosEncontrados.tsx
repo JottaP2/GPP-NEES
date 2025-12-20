@@ -47,7 +47,7 @@ const learnings = [
 
 const DesafiosEncontrados: React.FC = () => {
   return (
-    <section className="py-20 px-5 bg-slate-50">
+    <section id= "desafios" className="py-20 px-5 bg-slate-50">
       <div className="max-w-6xl mx-auto">
         <div className="flex items-center justify-center gap-3 mb-10">
           <AlertTriangle className="w-8 h-8 text-amber-500" />
