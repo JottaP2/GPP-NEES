@@ -7,7 +7,7 @@ import Fases from "@/src/components/Fases/Fases";
 import Dados from "@/src/components/Dados/Dados";
 import Footer from "@/src/components/Footer/footer";
 import ScrollToTop from "@/src/components/ScrollToTop/scrollToTop";
-
+import DesafiosEncontrados from "@/src/components/Sections/DesafiosEncontrados";
 const logos = [
   { id: "1", src: "/image1.png", alt: "Logo 1" },
   { id: "2", src: "/image2.png", alt: "Logo 2" },
@@ -52,6 +52,7 @@ export default function Home() {
       <LogoCarouselDemo logos={logos} />
       <HomeContent />
       <Fases />
+      <DesafiosEncontrados />
       <Dados />
         <Footer />
                 <ScrollToTop />
