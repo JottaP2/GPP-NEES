@@ -31,10 +31,13 @@ export default function Header() {
           <Link href="/Equipe" className="text-white hover:text-[#272727] transition-colors">
             Equipe
           </Link>
-          <Link href="#trajetoria" className="text-white hover:text-[#272727] transition-colors">
+          <Link href="/#trajetoria" className="text-white hover:text-[#272727] transition-colors">
             Trajetória
           </Link>
-          <Link href="#dados" className="text-white hover:text-[#272727] transition-colors">
+          <Link href="/#desafios" className="text-white hover:text-[#272727] transition-colors">
+            Desafios
+          </Link>
+          <Link href="/#dados" className="text-white hover:text-[#272727] transition-colors">
             Dados
           </Link>
         </nav>
@@ -85,14 +88,21 @@ export default function Header() {
             Equipe
           </Link>
           <Link
-            href="#trajetoria"
+            href="/#trajetoria"
             className="block text-white hover:text-[#272727] transition-colors py-2"
             onClick={() => setIsMenuOpen(false)}
           >
             Trajetória
           </Link>
           <Link
-            href="#dados"
+            href="/#desafios"
+            className="block text-white hover:text-[#272727] transition-colors py-2"
+            onClick={() => setIsMenuOpen(false)}
+          >
+            Desafios
+          </Link>
+          <Link
+            href="/#dados"
             className="block text-white hover:text-[#272727] transition-colors py-2"
             onClick={() => setIsMenuOpen(false)}
           >
