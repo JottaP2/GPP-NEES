@@ -51,13 +51,13 @@ const DesafiosEncontrados: React.FC = () => {
       <div className="max-w-6xl mx-auto">
         <div className="flex items-center justify-center gap-3 mb-10">
           <AlertTriangle className="w-8 h-8 text-amber-500" />
-          <h2 className="text-2xl md:text-3xl font-semibold text-slate-800">Desafios Encontrados</h2>
+          <h2 className="text-2xl md:text-3xl font-semibold text-slate-800 text-center">Desafios Encontrados</h2>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
           {/* Desafios */}
           <div>
-            <h3 className="text-xl font-semibold text-slate-800 mb-6 flex items-center gap-3">
+            <h3 className="text-xl font-semibold text-slate-800 mb-6 flex items-center justify-center gap-3 text-center">
               <span className="w-10 h-10 bg-amber-100 rounded-xl flex items-center justify-center">
                 <Target className="w-5 h-5 text-amber-500" />
               </span>
@@ -70,8 +70,8 @@ const DesafiosEncontrados: React.FC = () => {
                   key={index}
                   className="bg-white p-6 rounded-2xl shadow-md hover:-translate-y-1.5 transition-transform duration-300"
                 >
-                  <h4 className="text-lg font-semibold text-slate-800 mb-1">{challenge.title}</h4>
-                  <p className="text-slate-600 leading-relaxed">{challenge.description}</p>
+                  <h4 className="text-lg font-semibold text-slate-800 mb-1 text-center">{challenge.title}</h4>
+                  <p className="text-slate-600 leading-relaxed text-justify">{challenge.description}</p>
                 </div>
               ))}
             </div>
@@ -79,7 +79,7 @@ const DesafiosEncontrados: React.FC = () => {
 
           {/* Aprendizados */}
           <div>
-            <h3 className="text-xl font-semibold text-slate-800 mb-6 flex items-center gap-3">
+            <h3 className="text-xl font-semibold text-slate-800 mb-6 flex items-center justify-center gap-3 text-center">
               <span className="w-10 h-10 bg-emerald-100 rounded-xl flex items-center justify-center">
                 <Lightbulb className="w-5 h-5 text-emerald-500" />
               </span>
@@ -92,8 +92,8 @@ const DesafiosEncontrados: React.FC = () => {
                   key={index}
                   className="bg-white p-6 rounded-2xl shadow-md hover:-translate-y-1.5 transition-transform duration-300"
                 >
-                  <h4 className="text-lg font-semibold text-slate-800 mb-1">{learning.title}</h4>
-                  <p className="text-slate-600 leading-relaxed">{learning.description}</p>
+                  <h4 className="text-lg font-semibold text-slate-800 mb-1 text-center">{learning.title}</h4>
+                  <p className="text-slate-600 leading-relaxed text-justify">{learning.description}</p>
                 </div>
               ))}
             </div>
