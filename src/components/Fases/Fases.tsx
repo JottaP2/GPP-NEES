@@ -78,13 +78,13 @@ const Trajetoria: React.FC = () => {
               
               {/* Conteúdo */}
               <div className="bg-white p-6 rounded-xl shadow-md hover:shadow-lg hover:-translate-y-1 transition-all duration-300 border border-slate-100">
-                <span className="inline-block bg-blue-50 text-orange-400 px-3 py-1 rounded-full text-sm font-semibold mb-3">
+                <span className="inline-block bg-blue-50 text-orange-400 px-3 py-1 rounded-full text-sm font-semibold mb-3 text-center mx-auto">
                   {item.date}
-                </span>
-                <h3 className="text-lg md:text-xl font-semibold text-slate-800 mb-2">
+                </span> 
+                <h3 className="text-lg md:text-xl font-semibold text-slate-800 mb-2 text-center">
                   {item.title}
-                </h3>
-                <p className="text-slate-600 leading-relaxed">
+                </h3> 
+                <p className="text-slate-600 leading-relaxed text-justify">
                   {item.description}
                 </p>
               </div>
