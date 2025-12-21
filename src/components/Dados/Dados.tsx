@@ -137,8 +137,8 @@ const Dados: React.FC = () => {
           {bigNumbers.map((item, index) => (
             <div key={index} className="card-numero">
               <span className="icon-numero">{item.icon}</span>
-              <p className="label-numero">{item.label}</p>
-              <h3 className="valor-numero">{item.value}</h3>
+              <p className="label-numero text-center">{item.label}</p>
+              <h3 className="valor-numero text-center">{item.value}</h3>
             </div>
           ))}
         </div>
@@ -146,7 +146,7 @@ const Dados: React.FC = () => {
 
       {/* Seção: Avanço da Coleta */}
       <section className="secao-grafico">
-        <h2>Avanço das Aplicações no Período</h2>
+        <h2 className="text-center">Avanço das Aplicações no Período</h2>
         <div className="container-grafico">
           <ResponsiveContainer width="100%" height={300} style={{ overflow: 'visible' }}>
             <LineChart data={avancoColeta} margin={lineChartMargin}>
@@ -173,7 +173,7 @@ const Dados: React.FC = () => {
       <section className={`secao-grafico ${isMobile ? 'empilhado' : 'lado-a-lado'}`}>
         {/* Gráfico de Barras */}
         <div className="grafico-wrapper">
-          <h2>Aplicações por Unidade Federativa</h2>
+          <h2 className="text-center">Aplicações por Unidade Federativa</h2>
           <div className="container-grafico">
             <ResponsiveContainer width="100%" height={barChartHeight} style={{ overflow: 'visible' }}>
               <BarChart data={aplicacoesPorUF} margin={barChartMargin}>
@@ -205,7 +205,7 @@ const Dados: React.FC = () => {
 
         {/* Gráfico de Pizza */}
         <div className="grafico-wrapper">
-          <h2>Bastidores do Suporte - Distribuição de E-mails Help-desk</h2>
+          <h2 className="text-center">Bastidores do Suporte - Distribuição de E-mails Help-desk</h2>
           <div className="container-grafico container-pizza">
             <ResponsiveContainer width="100%" height={300} style={{ overflow: 'visible' }}>
               <PieChart margin={pieChartMargin}>
@@ -232,23 +232,23 @@ const Dados: React.FC = () => {
 
       {/* Seção: Insights */}
       <section className="secao-insights">
-        <h2>Principais Insights</h2>
+        <h2 className="text-center">Principais Insights</h2>
         <div className="insights-grid">
           <div className="insight-card">
-            <h3>📈 Crescimento Acelerado</h3>
-            <p>Aumento de 104% nas aplicações entre agosto e outubro, demonstrando a efetividade da estratégia de coleta.</p>
+            <h3 className="text-center">📈 Crescimento Acelerado</h3>
+            <p className="text-justify">Aumento de 104% nas aplicações entre agosto e outubro, demonstrando a efetividade da estratégia de coleta.</p>
           </div>
           <div className="insight-card">
-            <h3>🗺️ Concentração Regional</h3>
-            <p>SP, MG e RS respondem por 37% do total de aplicações, evidenciando a maior penetração nestas regiões.</p>
+            <h3 className="text-center">🗺️ Concentração Regional</h3>
+            <p className="text-justify">SP, MG e RS respondem por 37% do total de aplicações, evidenciando a maior penetração nestas regiões.</p>
           </div>
           <div className="insight-card">
-            <h3>🤝 Suporte Proativo</h3>
-            <p>70% dos chamados relacionados a acesso e preenchimento indicam necessidade de melhorias na experiência do usuário.</p>
+            <h3 className="text-center">🤝 Suporte Proativo</h3>
+            <p className="text-justify">70% dos chamados relacionados a acesso e preenchimento indicam necessidade de melhorias na experiência do usuário.</p>
           </div>
           <div className="insight-card">
-            <h3>📊 Amostra Representativa</h3>
-            <p>526 escolas prioritárias alcançadas garantem cobertura das instituições mais relevantes para a pesquisa.</p>
+            <h3 className="text-center">📊 Amostra Representativa</h3>
+            <p className="text-justify">526 escolas prioritárias alcançadas garantem cobertura das instituições mais relevantes para a pesquisa.</p>
           </div>
         </div>
       </section>
