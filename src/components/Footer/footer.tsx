@@ -11,7 +11,7 @@ const Footer: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {/* Sobre */}
           <div>
-            <h3 className="text-xl font-bold mb-4">EPPUFAL</h3>
+            <h3 className="text-xl font-bold mb-4">EPP-UFAL</h3>
             <p className="text-gray-400 text-sm">
               Equipe de Pesquisadores Penedense
             </p>
@@ -25,7 +25,7 @@ const Footer: React.FC = () => {
                 </Link>
               </li>
               <li>
-                <Link href="/about" className="text-gray-400 hover:text-white transition">
+                <Link href="https://www.nees.ufal.br/projetos_nees/inteligencia-aumentada-para-predicao-do-alunado-no-contexto-do-programa-nacional-do-livro-e-do-material-didatico-pnld/zhttps://www.nees.ufal.br/projetos_nees/inteligencia-aumentada-para-predicao-do-alunado-no-contexto-do-programa-nacional-do-livro-e-do-material-didatico-pnld/" className="text-gray-400 hover:text-white transition">
                   Sobre
                 </Link>
               </li>
