@@ -15,12 +15,14 @@ export default function Header() {
       <div className="max-w-[1240px] mx-auto px-4 sm:px-6 py-3 sm:py-4 flex justify-between items-center">
         {/* Logo */}
         <div className="flex-shrink-0">
+        <Link href="/">
           <Image
             src="/LOGOPH.svg"
             alt="GPPUFAL Logo"
             width={50}
             height={32}
           />
+        </Link>
         </div>
 
         {/* Desktop Menu */}

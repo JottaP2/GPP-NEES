@@ -13,7 +13,7 @@ const Footer: React.FC = () => {
           <div>
             <h3 className="text-xl font-bold mb-4">EPP-UFAL</h3>
             <p className="text-gray-400 text-sm">
-              Equipe de Pesquisadores Penedense
+              Equipe de Pesquisadores Penedenses
             </p>
           </div>
           <div>
