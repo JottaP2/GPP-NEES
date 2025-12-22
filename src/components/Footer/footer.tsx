@@ -56,7 +56,7 @@ const Footer: React.FC = () => {
               </li>
               <li className="flex items-center gap-2">
                 <MapPin size={16} />
-                <span>Unidade Educacional Ufal<br />Penedo - AL</span>
+                <span>UFAL-Unidade Educacional <br />Penedo - AL</span>
               </li>
             </ul>
           </div>
@@ -64,7 +64,7 @@ const Footer: React.FC = () => {
 
         {/* Copyright */}
         <div className="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400 text-sm">
-          <p>&copy; {new Date().getFullYear()} EPPUFAL. Todos os direitos reservados.</p>
+          <p>&copy; {new Date().getFullYear()} EPP-UFAL. Todos os direitos reservados.</p>
         </div>
       </div>
     </footer>
