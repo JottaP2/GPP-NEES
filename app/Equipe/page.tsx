@@ -91,6 +91,30 @@ export default function Equipe() {
       bio: " Atualização e validação de dados, garantindo a precisão das informações.",
       img: "./Patricio.jpeg",
     },
+
+        {
+      id: 13,
+      name: "Juliana Bezerra",
+      role: "Pesquisadora",
+      bio: " Inicialmente, fui responsável por contatar escolas dos estados do Paraná e de Minas Gerais. Posteriormente, atuei na conferência e na correção da planilha principal, além de exercer a função de designer.",
+      img: "./Juliana.jpeg",
+    },
+
+      {
+      id: 14,
+      name: "Sophia Sacramento",
+      role: "Pesquisadora",
+      bio: " Pesquisadora no NEES, desempenhando atividades de apoio à coordenação, bem como de coleta e armazenamento de dados por meio de telefone, redes sociais e internet.",
+      img: "./Sophia.jpeg",
+    },
+
+      {
+      id: 15,
+      name: "Gabriel Fideles",
+      role: "Assistente de Pesquisa e Suporte",
+      bio: " No projeto TED 12244, realizei pesquisas presenciais e remotas, além de análises e acompanhamento dos dados da pesquisa e das escolas. Atuei na otimização da gestão da pesquisa através da implementação de scripts de automação nas planilhas de controle e pela geração de dashboards e relatórios.",
+      img: "./fideles.jpeg",
+    },
   ];
 
   return (
