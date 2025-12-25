@@ -124,7 +124,7 @@ const Dados: React.FC = () => {
   return (
     <section className="dados-container" id="dados">
       <header className="dados-header">
-        <h2 className="text-2xl md:text-3xl font-semibold text-slate-800 text-center">
+        <h2 className="text-2xl md:text-3xl font-semibold text-slate-800 text-center"> 
           <BarChart3 className="w-8 h-8 inline mr-2 text-orange-400" />
           Dados da Coleta - ColetaPNLD
         </h2>
@@ -146,7 +146,7 @@ const Dados: React.FC = () => {
 
       {/* Seção: Avanço da Coleta */}
       <section className="secao-grafico">
-        <h2 className="text-center">Avanço das Aplicações no Período</h2>
+        <h3 className="text-lg md:text-xl font-semibold text-slate-800 mb-2 text-center">Avanço das Aplicações no Período</h3>
         <div className="container-grafico">
           <ResponsiveContainer width="100%" height={300} style={{ overflow: 'visible' }}>
             <LineChart data={avancoColeta} margin={lineChartMargin}>
@@ -173,7 +173,7 @@ const Dados: React.FC = () => {
       <section className={`secao-grafico ${isMobile ? 'empilhado' : 'lado-a-lado'}`}>
         {/* Gráfico de Barras */}
         <div className="grafico-wrapper">
-          <h2 className="text-center">Aplicações por Unidade Federativa</h2>
+          <h3 className="text-lg md:text-xl font-semibold text-slate-800 mb-2 text-center">Aplicações por Unidade Federativa</h3>
           <div className="container-grafico">
             <ResponsiveContainer width="100%" height={barChartHeight} style={{ overflow: 'visible' }}>
               <BarChart data={aplicacoesPorUF} margin={barChartMargin}>
@@ -205,7 +205,7 @@ const Dados: React.FC = () => {
 
         {/* Gráfico de Pizza */}
         <div className="grafico-wrapper">
-          <h2 className="text-center">Bastidores do Suporte - Distribuição de E-mails Help-desk</h2>
+          <h3 className="text-lg md:text-xl font-semibold text-slate-800 mb-2 text-center">Bastidores do Suporte - Distribuição de E-mails Help-desk</h3>
           <div className="container-grafico container-pizza">
             <ResponsiveContainer width="100%" height={300} style={{ overflow: 'visible' }}>
               <PieChart margin={pieChartMargin}>
@@ -232,7 +232,7 @@ const Dados: React.FC = () => {
 
       {/* Seção: Insights */}
       <section className="secao-insights">
-        <h2 className="text-center">Principais Insights</h2>
+        <h2 className="text-lg md:text-xl font-semibold text-slate-800 mb-2 text-center">Principais Insights</h2>
         <div className="insights-grid">
           <div className="insight-card">
             <h3 className="text-center">📈 Crescimento Acelerado</h3>
